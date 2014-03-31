@@ -1,0 +1,10 @@
+.plugin_head{padding:10px;}
+.plugin_wrap{width:65%;}
+.right{float:right;}
+.left{float:left;}
+.ads_bar{width:30%}
+.wrap_main{margin-top:20px;margin-right:20px;}
+.wrap_main .form-table th{width:220px;}
+#footer-trackid-input{
+box-shadow: inset 0 1px 2px rgba(0,0,0,.07);border:1px solid #ddd;}
+#toplevel_page_viva_plugins ul.wp-submenu .wp-first-item{display:none}
