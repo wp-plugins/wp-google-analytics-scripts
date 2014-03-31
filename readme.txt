@@ -13,6 +13,8 @@ WP Google Analytics Scripts provides statistics and basic analytical information
 
 It's provides information about the number of visitors to a website and the number of page views. It helps gauge traffic and popularity trends which is useful for market research.
 
+Google Analytics e-commerce reporting can track sales activity and performance. The e-commerce reports shows a site's transactions, revenue, and many other commerce-related metrics.
+
 = Features =
 
     * Easy install
@@ -35,6 +37,7 @@ Please take the time to let us and others know about your experiences by leaving
 
 If You Want more functionality or some modifications, just drop us a line what you want and We will try to add or modify the plugin functions.
 
+If you like the plugin please [Donate here](http://tinyurl.com/owxtkmt). 
 == Available Languages ==
 
     English
@@ -49,19 +52,30 @@ Installation consists of following steps:
 
 == Frequently Asked Questions ==
 
-= How to create your Analytics UA code =
+= What is the Google Analytics Individual Qualification (IQ)? =
 
-1. To get your analytics UA code you need to login into your Google Analytics control panel.
+The Google Analytics Individual Qualification is a proof of proficiency in Google Analytics that is available to any individual who has passed the Google Analytics IQ test. To learn how to prepare for the test, read How to prepare for Analytics IQ.
 
-2. Into the topbar of the page click the Admin link.
+= Why is Google offering the Google Analytics IQ? =
 
-3. Click the Tracking Info link.
+While Google Analytics is easy to use for beginners, it's also a very powerful tool in the hands of knowledgeable users. Qualified users will be effective at leveraging Google Analytics within their organizations and at helping others to do the same.
 
-4. Copy and paste the Tracking ID number into the "Google Analytics Scripts UA Tracking ID" under the Menu "WP Google Analytics Scripts" in your WordPress admin panel.
+= What do I need to do to become qualified in Google Analytics? =
 
-5. A tracking ID number looks like this UA-2986XXXX-X.
+You simply need to pass the Google Analytics IQ test. Before taking the test, however, we suggest that you complete the Analytics Academy Digital Analytics Fundamentals course.
 
-6. Copy and paste the Google Analytics Scripts into the "Google Analytics Footer Scripts" under the Menu "WP Google Analytics Scripts" in your WordPress admin panel. 
+= How much does it cost? =
+
+The Analytics Academy Digital Analytics Fundamentals course is free to everyone. The fee for taking the Google Analytics IQ test is $50.
+
+= Once I become qualified, how long does my Google Analytics Individual Qualification last? =
+
+Your qualification remains current for 18 months from the date that you pass the test.
+
+= Why should I become qualified? =
+
+Passing the Google Analytics IQ Test provides tangible validation that you are a proficient Google Analytics user. You can promote your qualification by publishing a link to your test record, as described in this blog post. 
+
 
 
 == Screenshots ==
