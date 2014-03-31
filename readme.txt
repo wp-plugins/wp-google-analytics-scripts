@@ -38,6 +38,7 @@ Please take the time to let us and others know about your experiences by leaving
 If You Want more functionality or some modifications, just drop us a line what you want and We will try to add or modify the plugin functions.
 
 If you like the plugin please [Donate here](http://tinyurl.com/owxtkmt). 
+
 == Available Languages ==
 
     English
@@ -75,8 +76,6 @@ Your qualification remains current for 18 months from the date that you pass the
 = Why should I become qualified? =
 
 Passing the Google Analytics IQ Test provides tangible validation that you are a proficient Google Analytics user. You can promote your qualification by publishing a link to your test record, as described in this blog post. 
-
-
 
 == Screenshots ==
 1. WP Google Analytics Scripts plugin appears after activation in Plugin section  .
