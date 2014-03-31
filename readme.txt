@@ -1,6 +1,6 @@
 === WP Google Analytics Sctipts ===
 Contributors: vivacityinfotech.jaipur
-Tags: 1.0
+Tags: google analytics , google analytics in wordpress , wp google analytics plugin ,  google analytics Events , universal analytics.
 Requires at least: 3.0
 Tested up to: 3.8
 License: GPLv2 or later
