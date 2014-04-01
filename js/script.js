@@ -1,5 +1,3 @@
-
-
 jQuery(document).ready(function(){
 	jQuery('form').submit(function(){
 		
@@ -19,5 +17,8 @@ jQuery(document).ready(function(){
 		});
 });
 function validateuacode(str){
+	if(str=='')
+	return true;
+	else 
     return (/^ua-\d{4,9}-\d{1,4}$/i).test(str.toString());
 }
