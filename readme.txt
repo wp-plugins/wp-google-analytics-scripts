@@ -9,24 +9,12 @@ WP Google Analytics Scripts - A simple plugin which lets you analyze your websit
 
 == Description ==
 
-WP Google Analytics Scripts provides statistics and basic analytical informations about your website. It helps one to estimate how traffic to a website changes after the launch of a new advertising campaign.
-
-It's provides information about the number of visitors to a website and the number of page views. It helps gauge traffic and popularity trends which is useful for market research.
-
-Google Analytics e-commerce reporting can track sales activity and performance. The e-commerce reports shows a site's transactions, revenue, and many other commerce-related metrics.
-
-= Features =
-
-    * Easy install
-    * Very easy to configure.
-    * The Search Engine Optimization (SEO) reports in Google Analytics help you understand how Google Web Search queries led visitors to your site.
-    * Real-Time Reporting.
-    * User Permissions.
-    * Site-Speed analysis.
-    * In-Page Analytics.
-    * Advertising Reports.
-    * Easily Integrated with AdWords.
-    * It also provides more advanced features, including custom visitor segmentation.
+WP Google Analytics Scripts provides to add your script and ua tracking code in website.
+ 
+= How to install =
+1. Upload "WP Google Analytics Scripts" to the /wp-content/plugins/ directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Place the "WP Google Analytics Scripts" Menu on your dashboard.
     
 
 = Rate Us / Feedback =
@@ -38,7 +26,6 @@ Please take the time to let us and others know about your experiences by leaving
 If You Want more functionality or some modifications, just drop us a line what you want and We will try to add or modify the plugin functions.
 
 If you like the plugin please [Donate here](http://tinyurl.com/owxtkmt). 
-
 == Available Languages ==
 
     English
@@ -76,6 +63,8 @@ Your qualification remains current for 18 months from the date that you pass the
 = Why should I become qualified? =
 
 Passing the Google Analytics IQ Test provides tangible validation that you are a proficient Google Analytics user. You can promote your qualification by publishing a link to your test record, as described in this blog post. 
+
+
 
 == Screenshots ==
 1. WP Google Analytics Scripts plugin appears after activation in Plugin section  .
