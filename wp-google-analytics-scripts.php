@@ -3,7 +3,7 @@
 Plugin Name: WP Google Analytics Scripts
 Plugin URI: http://vivacityinfotech.com/
 Description: WP Google Analytics Scripts generates detailed statistics about a website's traffic and traffic sources and measures conversions and sales.
-Author: VivacityInfotech
+Author: vivacityinfotech
 Version: 1.0
 Author URI: http://vivacityinfotech.com/
 Requires at least: 3.8
@@ -11,7 +11,7 @@ Text Domain: wp-google-analytics-scripts
 License: vivacityinfotech
 */
 function Analytics_settings_page( $links ) {
-	$settings_block = '<a href="' . admin_url('admin.php?page=wp-google-analytics-scripts.php' ) .'">Settings</a>';
+	$settings_block = '<a href="' . admin_url('admin.php?page=wp-google-analytics-scripts' ) .'">Settings</a>';
 	array_unshift( $links, $settings_block);
 	return $links;
 }
@@ -46,7 +46,7 @@ add_action( 'init', 'Analytics_render' );
 
 function Analytics_page_register() {
 	add_menu_page( 'VIVA Plugins', 'VIVA Plugins', 'manage_options', 'viva_plugins', 'Analytics_rendepage_submenu', '', 1001 );
-	add_submenu_page( 'viva_plugins','Add Custom Scripts','WP Google Analytics Scripts', 'manage_options', "fb_box_settings", 'Analytics_rendepage_submenu' );
+	add_submenu_page( 'viva_plugins','Add Custom Scripts','WP Google Analytics Scripts', 'manage_options', "wp-google-analytics-scripts", 'Analytics_rendepage_submenu' );
 }
 
 add_action( 'admin_menu', 'Analytics_page_register' );
