@@ -45,7 +45,7 @@ function Analytics_render() {
 add_action( 'init', 'Analytics_render' );
 
 function Analytics_page_register() {
-	add_menu_page( 'VIVA Plugins', 'VIVA Plugins', 'manage_options', 'viva_plugins', 'Analytics_rendepage_submenu', '', 1001 );
+	add_menu_page( 'VIVA Plugins', 'VIVA Plugins', 'manage_options', 'viva_plugins', 'Analytics_rendepage_submenu', plugins_url( '/images/vivacity_logo.png' ,__FILE__), 1001 );
 	add_submenu_page( 'viva_plugins','Add Custom Scripts','WP Google Analytics Scripts', 'manage_options', "wp-google-analytics-scripts", 'Analytics_rendepage_submenu' );
 }
 
@@ -87,6 +87,7 @@ add_action('admin_init','enqueue_styles');
 function enqueue_styles()
 {
 	wp_enqueue_style('style_plugin',plugins_url( 'css/plugin_style.css' , __FILE__ ) );	
+	wp_enqueue_script('script_plugin',plugins_url( 'js/script.js' , __FILE__ ) );	
 	
 	}
 function Analytics_rendepage_submenu() {
@@ -104,7 +105,7 @@ function Analytics_rendepage_submenu() {
 			<?php settings_fields('Analytics_settings_page'); ?>
 			<?php do_settings_sections( __FILE__ ); ?>
 			<p class="submit">
-				<input name="scripts-submit" type="submit" class="button-primary" value='Update Scripts' />
+				<input name="scripts-submit" type="submit" class="button-primary" value='Update Scripts' onclick="" />
 			</p>
 		</form>
 	</div>
@@ -146,3 +147,4 @@ function viva_ua_code() {
 	}
 
 }
+
