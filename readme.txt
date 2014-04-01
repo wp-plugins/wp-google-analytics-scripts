@@ -1,4 +1,4 @@
-=== WP Google Analytics Sctipts ===
+=== WP Google Analytics Scripts ===
 Contributors: vivacityinfotech.jaipur
 Tags: google analytics , google analytics in wordpress , wp google analytics plugin ,  google analytics Events , universal analytics.
 Requires at least: 3.0
