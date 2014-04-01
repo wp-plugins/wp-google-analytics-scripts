@@ -1,20 +1,24 @@
-=== WP Google Analytics Scripts ===
+ === WP Google Analytics Scripts ===
 Contributors: vivacityinfotech.jaipur
 Tags: google analytics , google analytics in wordpress , wp google analytics plugin ,  google analytics Events , universal analytics.
 Requires at least: 3.0
 Tested up to: 3.8
 License: GPLv2 or later
 
-WP Google Analytics Scripts - A simple plugin which lets you analyze your website traffic. 
+An easy way to add your Google Analytics code (GA code) in you blog pages.
 
 == Description ==
 
-WP Google Analytics Scripts provides to add your script and ua tracking code in website.
- 
-= How to install =
-1. Upload "WP Google Analytics Scripts" to the /wp-content/plugins/ directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Place the "WP Google Analytics Scripts" Menu on your dashboard.
+WP Google Analytics Scripts Plugin allows you to easily add your Google Analytics code(GA code) on all your blog pages. Just add your ID, That's all, you're ready to go. It lets you use Google Analytics to track your WordPress site statistics.
+
+Upload wp-google-analytics-scripts folder to the /wp-content/plugins/ directory, and activate the plugin through the 'Plugins' menu in WordPress Backend.Go to "Viva Plugins" menu is left navigation and add your Analytics ID or Script code.
+
+
+= Features =
+
+    -Easy install
+    -Very easy to configure.
+    
     
 
 = Rate Us / Feedback =
@@ -26,6 +30,7 @@ Please take the time to let us and others know about your experiences by leaving
 If You Want more functionality or some modifications, just drop us a line what you want and We will try to add or modify the plugin functions.
 
 If you like the plugin please [Donate here](http://tinyurl.com/owxtkmt). 
+
 == Available Languages ==
 
     English
@@ -64,8 +69,6 @@ Your qualification remains current for 18 months from the date that you pass the
 
 Passing the Google Analytics IQ Test provides tangible validation that you are a proficient Google Analytics user. You can promote your qualification by publishing a link to your test record, as described in this blog post. 
 
-
-
 == Screenshots ==
 1. WP Google Analytics Scripts plugin appears after activation in Plugin section  .
 2. WP Google Analytics Scripts settings page in the admin backend .
@@ -74,3 +77,4 @@ Passing the Google Analytics IQ Test provides tangible validation that you are a
 
 = 1.0 =
 * Initial release
+
