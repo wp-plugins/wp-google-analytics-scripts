@@ -3,6 +3,7 @@
 .right{float:right;}
 .left{float:left;}
 .ads_bar{width:30%}
+.error_wpga{border:2px solid red !important;}
 .wrap_main{margin-top:20px;margin-right:20px;}
 .wrap_main .form-table th{width:220px;}
 #footer-trackid-input{
