@@ -54,18 +54,29 @@ add_action( 'admin_menu', 'Analytics_page_register' );
 function Analytics_settings_register() {
 	register_setting( 'Analytics_settings_page', 'Analytics_setting' );
 
-	add_settings_section( 'Analytics_section', __( '', 'rt_polls' ), 'Analytics_block', __FILE__ );
-
-	add_settings_field( 'Analytics_inputbox', __( 'Google Analytics Footer Scripts', 'rt_polls' ), 'Analytics_inputbox', __FILE__, 'Analytics_section' );
-
-	add_settings_field( 'Analytics_footerbox_track', __( 'Google Analytics UA Tracking ID', 'rt_polls' ), 'Analytics_footerbox_track', __FILE__, 'Analytics_section' );
+	add_settings_section( 'Analytics_section', '', 'Analytics_block', __FILE__ );
+add_settings_field( 'Analytics_selectbox', 'Google Analytics scripts selector',  'Analytics_selectbox', __FILE__, 'Analytics_section' );
+	add_settings_field( 'Analytics_inputbox','Google Analytics Footer Scripts', 'Analytics_inputbox', __FILE__, 'Analytics_section' );
+	add_settings_field( 'Analytics_footerbox_track', 'Google Analytics UA Tracking ID', 'Analytics_footerbox_track', __FILE__, 'Analytics_section' );
+	
 }
 
 add_action('admin_init', 'Analytics_settings_register');
 
 function Analytics_block() {} 
 
-
+function Analytics_selectbox() {
+	$options  = get_option('Analytics_setting');
+	$field_value   = isset( $options['scripts_selector'] ) ? $options['scripts_selector'] : ''; ?>
+	
+	<select id="scripts-selector" class="scripts-selector" name="Analytics_setting[scripts_selector]"> <option value="0" <?php if ($field_value=="") echo "selected"; ?>>select an option </option>
+	<option value="1" <?php if ($field_value=="1") echo "selected"; ?>>Google Analytics Footer Scripts</option>
+	<option value="2" <?php if ($field_value=="2") echo "selected"; ?>>Google Analytics UA Tracking ID </option>
+	</select>
+	
+	<?php
+	
+	}
 function Analytics_inputbox() {
 	
 	$options  = get_option('Analytics_setting');
@@ -80,7 +91,7 @@ function Analytics_footerbox_track() {
 	
 	$field_value   = isset( $options['footer_trackid_input'] ) ? $options['footer_trackid_input'] : ''; ?>
 	<input id="footer-trackid-input" name="Analytics_setting[footer_trackid_input]" placeholder="UA-2986XXXX-X." style="width:300px; " value="<?php echo esc_html( $field_value ) ?>"/>
-	<p class="description"><?php echo 'Enter your Google UA Code/ID here.';?></p>
+	<p class="description"><?php echo 'Enter your Google UA Code/ID ( "UA-2986XXXX-X" ) here.';?></p>
 	<?php
 }
 add_action('admin_init','enqueue_styles');
@@ -105,7 +116,7 @@ function Analytics_rendepage_submenu() {
 			<?php settings_fields('Analytics_settings_page'); ?>
 			<?php do_settings_sections( __FILE__ ); ?>
 			<p class="submit">
-				<input name="scripts-submit" type="submit" class="button-primary" value='Update Scripts' onclick="" />
+				<input name="scripts-submit" type="submit" class="button-primary" id="submit" value='Update Scripts' onclick="" />
 			</p>
 		</form>
 	</div>
