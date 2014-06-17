@@ -12,7 +12,7 @@ License: vivacityinfotech
 */
 add_filter('plugin_row_meta', 'RegisterPluginLinks',10, 2);
 function RegisterPluginLinks($links, $file) {
-	if ( strpos( $file, 'wp-social-counter.php' ) !== false ) {
+	if ( strpos( $file, 'wp-google-analytics-scripts.php' ) !== false ) {
 		$links[] = '<a href="https://wordpress.org/plugins/wp-google-analytics-scripts/faq/">FAQ</a>';
 		$links[] = '<a href="support@vivacityinfotech.com">Support</a>';
 		$links[] = '<a href="http://tinyurl.com/owxtkmt">Donate</a>';
