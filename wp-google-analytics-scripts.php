@@ -15,7 +15,7 @@ function RegisterPluginLinks($links, $file) {
 	if ( strpos( $file, 'wp-google-analytics-scripts.php' ) !== false ) {
 		$links[] = '<a href="https://wordpress.org/plugins/wp-google-analytics-scripts/faq/">FAQ</a>';
 		$links[] = '<a href="mailto:support@vivacityinfotech.com">Support</a>';
-		$links[] = '<a href="http://tinyurl.com/owxtkmt">Donate</a>';
+		$links[] = '<a href="http://bit.ly/1icl56K">Donate</a>';
 	}
 	return $links;
 }
