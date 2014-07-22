@@ -76,10 +76,7 @@ add_action('admin_init', 'Analytics_settings_register');
  	$options  = get_option('Analytics_setting');
  
 $field_value   = isset( $options['ignore_admin_area'] ) ? $options['ignore_admin_area'] : '';
-//echo $field_value;
-	/*	$do_not_track = array(
-				'ignore_admin_area'       => __( 'Do not log anything in the admin area', 'wp-google-analytics' ),
-			); */
+
 		global $wp_roles;
 		foreach( $wp_roles->roles as $role => $role_info ) {
 			$do_not_track['ignore_role_' . $role] = sprintf( __( 'Do not log %s when logged in', 'wp-google-analytics' ), rtrim( $role_info['name'], 's' ) );
@@ -175,12 +172,8 @@ function viva_ua_code() {
 $current_user = wp_get_current_user();
  	$options  = get_option('Analytics_setting');
  	$user = new WP_User( get_current_user_id() );
-//	echo '<pre>'; print_r($options);echo '</pre>';
 $user_role = $user->roles[0];
-//echo $user_role;
-// $screen = get_current_screen();
-//echo '<pre>'; 
- //print_r($screen);
+
 
 	if($options['ignore_role_administrator'] && $user_role == 'administrator' || $options['ignore_role_editor'] && $user_role == 'editor' || $options['ignore_role_subscriber'] && $user_role == 'subscriber' || $options['ignore_role_contributor'] && $user_role == 'contributor' || $options['ignore_role_author'] && $user_role == 'author') 
 		return 0;
