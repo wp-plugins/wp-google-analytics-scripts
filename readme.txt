@@ -79,3 +79,6 @@ Passing the Google Analytics IQ Test provides tangible validation that you are a
 = 1.0 =
 * Initial release
 
+= 1.1 =
+* Added Ignore user roles
+
