@@ -3,12 +3,27 @@
 Plugin Name: WP Google Analytics Scripts
 Plugin URI: http://www.vivacityinfotech.net
 Description: WP Google Analytics Scripts generates detailed statistics about a website's traffic and traffic sources and measures conversions and sales.
-Author: vivacityinfotech
-Version: 1.1
+Author: Vivacity Infotech Pvt. Ltd.
+Version: 1.2
 Author URI: http://www.vivacityinfotech.net
 Requires at least: 3.8
 Text Domain: wp-google-analytics-scripts
-License: vivacityinfotech
+*/
+/*
+Copyright 2014  Vivacity InfoTech Pvt. Ltd.  (email : support@vivacityinfotech.com)
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License, version 2, as 
+    published by the Free Software Foundation.
+
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 add_filter('plugin_row_meta', 'RegisterPluginLinks',10, 2);
 function RegisterPluginLinks($links, $file) {
@@ -100,7 +115,8 @@ function Analytics_selectbox() {
 	$options  = get_option('Analytics_setting');
 	$field_value   = isset( $options['scripts_selector'] ) ? $options['scripts_selector'] : ''; ?>
 	
-	<select id="scripts-selector" class="scripts-selector" name="Analytics_setting[scripts_selector]"> <option value="0" <?php if ($field_value=="") echo "selected"; ?>>select an option </option>
+	<select id="scripts-selector" class="scripts-selector" name="Analytics_setting[scripts_selector]"> 
+	<option value="0" <?php if ($field_value=="") echo "selected"; ?>>select an option </option>
 	<option value="1" <?php if ($field_value=="1") echo "selected"; ?>>Google Analytics Footer Scripts</option>
 	<option value="2" <?php if ($field_value=="2") echo "selected"; ?>>Google Analytics UA Tracking ID </option>
 	</select>
@@ -113,7 +129,7 @@ function Analytics_inputbox() {
 	$options  = get_option('Analytics_setting');
 	$field_value   = isset( $options['footer_scripts_input'] ) ? $options['footer_scripts_input'] : ''; ?>
 	
-	<textarea id="footer-scripts-input" name="Analytics_setting[footer_scripts_input]" placeholder=" Analytics Footer Scripts" style="width:300px; height: 200px;" ><?php echo esc_html( $field_value ) ?></textarea>
+	<textarea id="ftr-scripts-input" name="Analytics_setting[footer_scripts_input]" placeholder=" Analytics Footer Scripts" style="width:300px; height: 200px;" ><?php echo esc_html( $field_value ) ?></textarea>
 	<p class="description"><?php echo 'Enter your Google Analytic Script .';?></p>
 	<?php
 }
@@ -121,7 +137,7 @@ function Analytics_footerbox_track() {
 	$options  = get_option('Analytics_setting');
 	
 	$field_value   = isset( $options['footer_trackid_input'] ) ? $options['footer_trackid_input'] : ''; ?>
-	<input id="footer-trackid-input" name="Analytics_setting[footer_trackid_input]" placeholder="UA-2986XXXX-X." style="width:300px; " value="<?php echo esc_html( $field_value ) ?>"/>
+	<input id="ftr-trackid-input" name="Analytics_setting[footer_trackid_input]" placeholder="UA-2986XXXX-X." style="width:300px; " value="<?php echo esc_html( $field_value ) ?>"/>
 	<p class="description"><?php echo 'Enter your Google UA Code/ID ( "UA-2986XXXX-X" ) here.';?></p>
 	<?php
 }
@@ -143,7 +159,7 @@ function Analytics_rendepage_submenu() {
 		<?php screen_icon(); ?>
 		<h2><?php 'Add Custom Scripts Plugin'; ?></h2>
 		<p><?php 'Add your own scripts (including Google Analytics) to your header or footer regardless of what theme you are using.' ?></p>
-		<form name="myform" action="options.php" method="post" enctype="multipart/form-data">
+		<form name="myform" class="myform" action="options.php" method="post" enctype="multipart/form-data">
 			<?php settings_fields('Analytics_settings_page'); ?>
 			<?php do_settings_sections( __FILE__ ); ?>
 			<p class="submit">
@@ -174,6 +190,11 @@ function viva_ua_code() {
 
 $current_user = wp_get_current_user();
  	$options  = get_option('Analytics_setting');
+if (!isset($options['ignore_role_administrator'])) {$options['ignore_role_administrator'] = "";}
+if (!isset($options['ignore_role_editor'])) {$options['ignore_role_editor'] = "";}
+if (!isset($options['ignore_role_subscriber'])) {$options['ignore_role_subscriber'] = "";}
+if (!isset($options['ignore_role_contributor'])) {$options['ignore_role_contributor'] = "";}
+if (!isset($options['ignore_role_author'])) {$options['ignore_role_author'] = "";}
  	$user = new WP_User( get_current_user_id() );
 //	echo '<pre>'; print_r($options);echo '</pre>';
 $user_role = $user->roles[0];
@@ -182,17 +203,18 @@ $user_role = $user->roles[0];
 //echo '<pre>'; 
  //print_r($screen);
 
-	if($options['ignore_role_administrator'] && $user_role == 'administrator' || $options['ignore_role_editor'] && $user_role == 'editor' || $options['ignore_role_subscriber'] && $user_role == 'subscriber' || $options['ignore_role_contributor'] && $user_role == 'contributor' || $options['ignore_role_author'] && $user_role == 'author') 
+	if( ($options['ignore_role_administrator'] && $user_role == 'administrator') || ($options['ignore_role_editor'] && $user_role == 'editor') || ($options['ignore_role_subscriber'] && $user_role == 'subscriber') || ($options['ignore_role_contributor'] && $user_role == 'contributor') || ($options['ignore_role_author'] && $user_role == 'author')) 
 		return 0;
 		
 	$ua_code = get_option( 'Analytics_setting' );
-	$ua_id = $ua_code['footer_trackid_input'];
+	 $ua_id = $ua_code['footer_trackid_input'];
+	 $ua_script = $ua_code['footer_scripts_input'];
 	$home_url = get_home_url();
 	$find = array( 'http://', 'https://', 'www.');
 	$replace = '';
 	$output = str_replace( $find, $replace, $home_url );
 
-	if($ua_id !== '') {
+	if(($ua_id !== '') && ($ua_script == '') ) {
 		echo "
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -204,5 +226,4 @@ $user_role = $user->roles[0];
 	ga('send', 'pageview');
 	</script>";
 	}
-
-}
+  }
