@@ -6,7 +6,7 @@ Description: WP Google Analytics Scripts generates detailed statistics about a w
 Author: Vivacity Infotech Pvt. Ltd.
 Version: 1.2
 Author URI: http://www.vivacityinfotech.net
-Requires at least: 3.8
+* Author Email: support@vivacityinfotech.net
 Text Domain: wp-google-analytics-scripts
 */
 /*

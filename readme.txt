@@ -3,7 +3,7 @@ Contributors: vivacityinfotech.jaipur
 Donate link: http://bit.ly/1icl56K
 Tags: Wordpress Google Analytics, WP Google Analytics, Google Analytics , GA code,GA code integration, GA Script, GA Plugin, Google Analytics in Wordpress , WP Google Analytics Plugin , Universal Analytics.
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.2
 License: GPLv2 or later
 
 An easy way to add your Google Analytics code (GA code) in you blog pages.
