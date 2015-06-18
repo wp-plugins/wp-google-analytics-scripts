@@ -6,7 +6,7 @@ Description: WP Google Analytics Scripts generates detailed statistics about a w
 Author: Vivacity Infotech Pvt. Ltd.
 Version: 1.2
 Author URI: http://www.vivacityinfotech.net
-* Author Email: support@vivacityinfotech.net
+Requires at least: 3.8
 Text Domain: wp-google-analytics-scripts
 */
 /*
@@ -168,16 +168,51 @@ function Analytics_rendepage_submenu() {
 		</form>
 	</div>
 	</div>
-	<div class="postbox right ads_bar">
-			<h3 class="hndle" style="padding:10px;"><span>Follow Us</span></h3>
-			<div class="inside">
-			Please take the time to let us and others know about your experiences by leaving a review, so that we can improve the plugin for you and other users.
-<br>
-<h4>Want More?</h4>
-If You Want more functionality or some modifications, just drop us a line what you want and We will try to add or modify the plugin functions.
-			
-			</div>
-			</div>
+	
+ <div class="right">
+	<center>
+<div class="bottom">
+		    <h3 id="download-comments-wvpd" class="title"><?php _e( 'Download Free Plugins', 'wvpd' ); ?></h3>
+		     
+     <div id="downloadtbl-comments-wvpd" class="togglediv">  
+	<h3 class="company">
+<p> Vivacity InfoTech Pvt. Ltd. is an ISO 9001:2008 Certified Company is a Global IT Services company with expertise in outsourced product development and custom software development with focusing on software development, IT consulting, customized development.We have 200+ satisfied clients worldwide.</p>	
+<?php _e( 'Our Top 5 Latest Plugins', 'wvpd' ); ?>:
+</h3>
+<ul class="">
+<li><a target="_blank" href="https://wordpress.org/plugins/woocommerce-social-buttons/">Woocommerce Social Buttons</a></li>
+<li><a target="_blank" href="https://wordpress.org/plugins/vi-random-posts-widget/">Vi Random Post Widget</a></li>
+<li><a target="_blank" href="http://wordpress.org/plugins/wp-infinite-scroll-posts/">WP EasyScroll Posts</a></li>
+<li><a target="_blank" href="https://wordpress.org/plugins/buddypress-social-icons/">BuddyPress Social Icons</a></li>
+<li><a target="_blank" href="http://wordpress.org/plugins/wp-fb-share-like-button/">WP Facebook Like Button</a></li>
+</ul>
+  </div> 
+</div>		
+<div class="bottom">
+		    <h3 id="donatehere-comments-wvpd" class="title"><?php _e( 'Donate Here', 'wvpd' ); ?></h3>
+     <div id="donateheretbl-comments-wvpd" class="togglediv">  
+     <p><?php _e( 'If you want to donate , please click on below image.', 'wvpd' ); ?></p>
+	<a href="http://bit.ly/1icl56K" target="_blank"><img class="donate" src="<?php echo plugins_url( 'images/paypal.gif' , __FILE__ ); ?>" width="150" height="50" title="<?php _e( 'Donate Here', 'wvpd' ); ?>"></a>		
+  </div> 
+</div>	
+<div class="bottom">
+		    <h3 id="donatehere-comments-wvpd" class="title"><?php _e( 'Woocommerce Frontend Plugin', 'wvpd' ); ?></h3>
+     <div id="donateheretbl-comments-wvpd" class="togglediv">  
+     <p><?php _e( 'If you want to purchase , please click on below image.', 'wvpd' ); ?></p>
+	<a href="http://bit.ly/1HZGRBg" target="_blank"><img class="donate" src="<?php echo plugins_url( 'images/woo_frontend_banner.png' , __FILE__ ); ?>" width="336" height="280" title="<?php _e( 'Donate Here', 'wvpd' ); ?>"></a>		
+  </div> 
+</div>
+<div class="bottom">
+		    <h3 id="donatehere-comments-wvpd" class="title"><?php _e( 'Blue Frog Template', 'wvpd' ); ?></h3>
+     <div id="donateheretbl-comments-wvpd" class="togglediv">  
+     <p><?php _e( 'If you want to purchase , please click on below image.', 'wvpd' ); ?></p>
+	<a href="http://bit.ly/1Gwp4Vv" target="_blank"><img class="donate" src="<?php echo plugins_url( 'images/blue_frog_banner.png' , __FILE__ ); ?>" width="336" height="280" title="<?php _e( 'Donate Here', 'wvpd' ); ?>"></a>		
+  </div> 
+</div>
+	</center>
+</div>	
+	
+	
 			</div>
 	<?php
 }
